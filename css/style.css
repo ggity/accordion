@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: 'Istok Web', sans-serif;
+    color: #241c15;
+}
+
+.accordion-section {}
+
+.accordion-section-heading {
+    padding: 0 20px;
+}
+
+.accordion-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: fit-content;
+    /* max-width: 1000px; */
+}
+
+a:focus-visible {
+    outline: none;
+}
+
+
+.accordion-item-wrapper {
+    border-top: 2px solid #111;
+    min-width: 320px;
+    width: 700px;
+    max-width: 1000px;
+}
+
+.accordion-item-wrapper:last-child {
+    border-bottom: 2px solid #111;
+}
+
+.accordion-item-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.accordion-item-heading {
+    color: inherit;
+    text-decoration: none;
+}
+
+.accordion-item-header:hover h3 {
+    text-decoration: underline;
+    text-decoration-thickness: .15em;
+    text-underline-offset: .3em;
+}
+
+.accordion-item-heading h3 {
+    margin: 0;
+    display: inline-block;
+    padding: 1.4em 0;
+}
+
+/* svaka ikonica upakovana je u taster       */
+.accordion-item-btn {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background-color: inherit;
+    display: grid;
+    place-content: center;
+}
+
+/* ikonica za svaki element liste */
+.accordion-item-icon {
+    font-size: 1.2rem;
+}
+
+.fa-circle-up {
+    display: none;
+}
+
+.accordion-item-content {
+    height: 0;
+    overflow: hidden;
+}
+
+.accordion-item-header.active+.accordion-item-content {
+    height: 100%;
+
+}
+
+/* sakriva ikonicu ka dole kada je sadrzaj accordina prikazan */
+.accordion-item-header.active .fa-circle-down {
+    display: none;
+}
+
+/* prikazuje ikononicu ka gore kada sadrzaj accordiona nije prikazan */
+.accordion-item-header.active .fa-circle-up {
+    display: inline-block;
+}
+
+.accordion-item-content p {
+    margin: 0;
+    padding: 0 20px;
+    padding-bottom: 2em;
+    color: #403b3b;
+    max-width: 66ch;
+}
+
+/* srediti ikonice, prikaz unutar accordiona, malo opet js */
+/* ikonice sredjene */
+/* mislim da je i pirkaz unutar acordiona ok */
+/* moze se urediti prikaz za ul kada bi je ugnjezdili... */
+/* mislim da je poprilicno responsive */
+/* uvesti promjenjive za neke stvari */
